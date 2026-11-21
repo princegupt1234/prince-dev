@@ -9,7 +9,7 @@ A responsive personal portfolio built with HTML, CSS, Bootstrap, and a small amo
 - Rotating terminal commands and outputs with reduced-motion support
 - About, skills, projects, training, education, and certifications
 - Downloadable resume
-- Contact form handled by FormSubmit
+- Contact form handled by Web3Forms
 
 ## Technologies
 
@@ -44,7 +44,7 @@ There is no build step or package installation.
 
 ## Contact form
 
-The form submits to FormSubmit; there is no application backend in this project. Form submissions are processed by that service. If the delivery address or FormSubmit configuration changes, update the form action in `index.html` and complete any activation steps required by the service.
+The form submits to Web3Forms; there is no application backend in this project. Form submissions are processed by that service. If the delivery address or Web3Forms configuration changes, update the access key and form action in `index.html` and complete any activation steps required by the service.
 
 ## Publish with GitHub Pages
 
