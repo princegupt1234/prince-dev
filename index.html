@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Prince Gupt — Java Backend Developer</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Caveat:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-top">
+    <div class="sidebar-logo" aria-label="Prince Gupt">PG</div>
+    <!-- Save your photo as profile.jpg beside index.html to fill both image slots. -->
+    <div class="sidebar-avatar">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <span class="avatar-fallback" aria-hidden="true">PG</span>
+          <img class="profile-photo" src="profile.png" alt="Prince Gupt" data-profile-image/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="sidebar-nav" aria-label="Primary navigation">
+    <a href="#hero" class="nav-item active" data-section="hero">
+      <i class="bi bi-house-heart"></i><span>Home</span>
+    </a>
+    <a href="#about" class="nav-item" data-section="about">
+      <i class="bi bi-person-heart"></i><span>About</span>
+    </a>
+    <a href="#skills" class="nav-item" data-section="skills">
+      <i class="bi bi-braces"></i><span>Skills</span>
+    </a>
+    <a href="#projects" class="nav-item" data-section="projects">
+      <i class="bi bi-grid-1x2"></i><span>Projects</span>
+    </a>
+    <a href="#experience" class="nav-item" data-section="experience">
+      <i class="bi bi-journal-bookmark"></i><span>Experience</span>
+    </a>
+    <a href="#education" class="nav-item" data-section="education">
+      <i class="bi bi-mortarboard"></i><span>Education</span>
+    </a>
+    <a href="#contact" class="nav-item" data-section="contact">
+      <i class="bi bi-chat-heart"></i><span>Contact</span>
+    </a>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="sidebar-sep"></div>
+    <button class="theme-toggle" id="themeToggle" type="button" title="Toggle theme" aria-label="Switch to dark theme" aria-pressed="false">
+      <i class="bi bi-moon-stars"></i>
+    </button>
+  </div>
+</aside>
+
+<!-- MOBILE TOPBAR -->
+<header class="mobile-topbar d-lg-none">
+  <div class="mobile-logo">PG</div>
+  <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Open navigation menu" aria-controls="mobileDrawer" aria-expanded="false">
+    <i class="bi bi-list"></i>
+  </button>
+</header>
+
+<!-- MOBILE DRAWER -->
+<button class="mobile-overlay" id="mobileOverlay" type="button" aria-label="Close navigation menu" tabindex="-1"></button>
+<aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="drawer-header">
+    <span class="mobile-logo">PG</span>
+    <button class="drawer-close" id="drawerClose" type="button" aria-label="Close navigation menu"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="#hero" class="nav-item active">Home</a>
+    <a href="#about" class="nav-item">About</a>
+    <a href="#skills" class="nav-item">Skills</a>
+    <a href="#projects" class="nav-item">Projects</a>
+    <a href="#experience" class="nav-item">Experience</a>
+    <a href="#education" class="nav-item">Education</a>
+    <a href="#contact" class="nav-item">Contact</a>
+  </nav>
+  <button class="drawer-theme-toggle" id="mobileThemeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+    <i class="bi bi-moon-stars" aria-hidden="true"></i><span>Toggle theme</span>
+  </button>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+  <!-- HERO -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-shape shape1"></div>
+    <div class="hero-bg-shape shape2"></div>
+    <a class="hero-top-cta" href="#contact"><i class="bi bi-send"></i> Let's Talk <i class="bi bi-arrow-up-right"></i></a>
+    <div class="terminal-bar" role="group" aria-label="Rotating terminal commands and their outputs">
+      <div class="terminal-command-line" aria-hidden="true">
+        <span class="terminal-prompt">prince@dev:~$</span>
+        <span class="terminal-command" id="heroCommandText">whoami</span>
+        <span class="terminal-output" id="heroRoleText">Prince Gupt</span>
+        <span class="terminal-cursor"></span>
+      </div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="availability-badge">
+          <span class="badge-dot"></span> Open to SDE / Java Developer opportunities
+        </div>
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Prince <span class="name-gradient">Gupt</span></h1>
+        <h2 class="hero-title">Java Backend Developer</h2>
+        <p class="hero-tagline">Java &amp; Spring Boot · Full Stack Development</p>
+        <p class="hero-location"><i class="bi bi-geo-alt"></i> Lucknow, Uttar Pradesh, India</p>
+        <p class="hero-bio">Computer Science undergraduate (B.Tech, Class of 2027) with hands-on experience building MVC web applications and RESTful services using Java, Spring Boot, and MySQL. Seeking an SDE / Java Developer role.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary-custom">View My Work <i class="bi bi-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-secondary-custom">Let's Connect <i class="bi bi-arrow-up-right"></i></a>
+          <a href="Prince-Gupt-Resume.pdf" class="btn btn-secondary-custom" download="Prince-Gupt-Resume.pdf">Download Resume <i class="bi bi-download"></i></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-label">Graduation</span>
+            <span class="stat-value">Jun 2027</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Completed Projects</span>
+            <span class="stat-value">3</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Core Focus</span>
+            <span class="stat-value">Java + Spring</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="portrait-composition">
+          <div class="portrait-glow"></div>
+          <div class="portrait-ring-outer"></div>
+          <div class="portrait-frame">
+            <div class="portrait-avatar">
+              <img class="profile-photo" src="profile.png" alt="Prince Gupt" data-profile-image/>
+              <div class="portrait-initials">PG</div>
+              <div class="portrait-silhouette">
+                <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="100" cy="72" rx="38" ry="40" fill="#C9B5F5" opacity="0.7"/>
+                  <path d="M30 200 Q40 140 100 135 Q160 140 170 200" fill="#A98AE8" opacity="0.5"/>
+                </svg>
+              </div>
+              <p class="portrait-replace-hint">[ Replace with your photo ]</p>
+            </div>
+          </div>
+          <div class="float-shape fs1"></div>
+          <div class="float-shape fs2"></div>
+          <div class="float-shape fs3"></div>
+          <div class="float-shape fs4"></div>
+          <span class="deco-star s1">✦</span>
+          <span class="deco-star s2">✦</span>
+          <span class="deco-star s3">✧</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/princegupt1234/" class="social-icon" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/princegupt1234" class="social-icon" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+        <a href="https://wa.me/917275807576" class="social-icon" title="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+        <a href="mailto:princegupt3052@gmail.com" class="social-icon" title="Email"><i class="bi bi-envelope"></i></a>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"><div class="scroll-dot"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-block">
+    <div class="section-label">About Me</div>
+    <h2 class="section-heading">More About Me</h2>
+    <p class="section-sub">Java backend foundations, full-stack projects, and a focus on practical software.</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a <strong>Computer Science undergraduate</strong> pursuing a B.Tech in Computer Science &amp; Engineering at Bansal Institute of Engineering &amp; Technology (AKTU), Lucknow, with graduation expected in June 2027.</p>
+        <p>I build MVC web applications and RESTful services using <strong>Java, Spring Boot, and MySQL</strong>. My projects include an e-commerce application, a portfolio website, and a transport management system.</p>
+        <p>During my Java and Spring Boot summer training at Techpile Technology, I built backend services, designed relational schemas, integrated Thymeleaf with Spring MVC, and tested APIs using Postman.</p>
+        <p>I'm seeking an <strong>SDE / Java Developer</strong> role.</p>
+        <div class="about-annotation">English · Professional working proficiency &nbsp; / &nbsp; Hindi · Native</div>
+      </div>
+      <div class="about-cards">
+        <div class="about-info-card card-lavender">
+          <i class="bi bi-mortarboard"></i>
+          <div>
+            <strong>Education</strong>
+            <span>B.Tech CSE · BIET, AKTU · Aug 2023–Jun 2027</span>
+          </div>
+        </div>
+        <div class="about-info-card card-pink">
+          <i class="bi bi-code-slash"></i>
+          <div>
+            <strong>Primary Stack</strong>
+            <span>Java · Spring Boot · REST APIs · MySQL</span>
+          </div>
+        </div>
+        <div class="about-info-card card-blue">
+          <i class="bi bi-lightbulb"></i>
+          <div>
+            <strong>Target Roles</strong>
+            <span>SDE · Java Developer</span>
+          </div>
+        </div>
+        <div class="about-info-card card-peach">
+          <i class="bi bi-geo-alt"></i>
+          <div>
+            <strong>Location</strong>
+            <span>Lucknow, Uttar Pradesh</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section-block section-alt">
+    <div class="section-label">Technical Toolkit</div>
+    <h2 class="section-heading">My Technical Toolkit</h2>
+    <p class="section-sub">Technologies I work with to build full stack applications.</p>
+    <div class="skills-categories">
+      <div class="skill-category">
+        <div class="category-label">Backend</div>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon si-spring"><i class="bi bi-flower1"></i></div><strong>Spring Boot</strong><span>Rapid application development</span></div>
+          <div class="skill-card"><div class="skill-icon si-mvc"><i class="bi bi-diagram-3"></i></div><strong>Spring MVC</strong><span>Web layer architecture</span></div>
+          <div class="skill-card"><div class="skill-icon si-jpa"><i class="bi bi-database"></i></div><strong>Spring Data JPA</strong><span>Data persistence layer</span></div>
+          <div class="skill-card"><div class="skill-icon si-hib"><i class="bi bi-hdd-stack"></i></div><strong>Hibernate</strong><span>ORM framework</span></div>
+          <div class="skill-card"><div class="skill-icon si-api"><i class="bi bi-arrow-left-right"></i></div><strong>REST API Design</strong><span>Backend endpoints and integrations</span></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="category-label">Frontend</div>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon si-html"><i class="bi bi-filetype-html"></i></div><strong>HTML5</strong><span>Semantic markup</span></div>
+          <div class="skill-card"><div class="skill-icon si-css"><i class="bi bi-filetype-css"></i></div><strong>CSS3</strong><span>Styling &amp; layouts</span></div>
+          <div class="skill-card"><div class="skill-icon si-bs"><i class="bi bi-bootstrap"></i></div><strong>Bootstrap 5</strong><span>Responsive UI framework</span></div>
+          <div class="skill-card"><div class="skill-icon si-thy"><i class="bi bi-file-earmark-code"></i></div><strong>Thymeleaf</strong><span>Server-side templating</span></div>
+          <div class="skill-card"><div class="skill-icon si-html"><i class="bi bi-filetype-js"></i></div><strong>JavaScript</strong><span>ES6+ interactive interfaces</span></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="category-label">Programming</div>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon si-java"><i class="bi bi-cup-hot"></i></div><strong>Java</strong><span>OOP, Collections, Streams</span></div>
+          <div class="skill-card"><div class="skill-icon si-api"><i class="bi bi-code-slash"></i></div><strong>C</strong><span>Programming fundamentals</span></div>
+          <div class="skill-card"><div class="skill-icon si-mvc"><i class="bi bi-database"></i></div><strong>SQL</strong><span>Queries and relational data</span></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="category-label">Database &amp; Tools</div>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon si-mysql"><i class="bi bi-server"></i></div><strong>MySQL</strong><span>Relational database</span></div>
+          <div class="skill-card"><div class="skill-icon si-mysql"><i class="bi bi-database"></i></div><strong>MongoDB</strong><span>NoSQL database</span></div>
+          <div class="skill-card"><div class="skill-icon si-git"><i class="bi bi-git"></i></div><strong>Git</strong><span>Version control</span></div>
+          <div class="skill-card"><div class="skill-icon si-gh"><i class="bi bi-github"></i></div><strong>GitHub</strong><span>Code hosting &amp; collaboration</span></div>
+          <div class="skill-card"><div class="skill-icon si-ij"><i class="bi bi-lightbulb"></i></div><strong>IntelliJ IDEA</strong><span>Java development environment</span></div>
+          <div class="skill-card"><div class="skill-icon si-vs"><i class="bi bi-code-square"></i></div><strong>VS Code</strong><span>Code editor</span></div>
+          <div class="skill-card"><div class="skill-icon si-render"><i class="bi bi-box"></i></div><strong>Maven</strong><span>Java project build tool</span></div>
+          <div class="skill-card"><div class="skill-icon si-render"><i class="bi bi-send"></i></div><strong>Postman</strong><span>REST API testing</span></div>
+          <div class="skill-card"><div class="skill-icon si-render"><i class="bi bi-cloud-upload"></i></div><strong>Render</strong><span>Portfolio deployment</span></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="category-label">Core Concepts</div>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon si-java"><i class="bi bi-diagram-3"></i></div><strong>Data Structures &amp; Algorithms</strong><span>Core problem-solving concepts</span></div>
+          <div class="skill-card"><div class="skill-icon si-mvc"><i class="bi bi-boxes"></i></div><strong>MVC Architecture</strong><span>Application structure</span></div>
+          <div class="skill-card"><div class="skill-icon si-mysql"><i class="bi bi-diagram-2"></i></div><strong>Database Normalization</strong><span>Relational data design</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section-block">
+    <div class="section-label">Services</div>
+    <h2 class="section-heading">What I Can Build</h2>
+    <p class="section-sub">End-to-end web development capabilities.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon"><i class="bi bi-layout-text-window"></i></div>
+        <h3>Frontend Development</h3>
+        <p>Responsive and user-friendly website interfaces built with HTML, CSS, Bootstrap and Thymeleaf.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon"><i class="bi bi-gear-wide-connected"></i></div>
+        <h3>Backend Development</h3>
+        <p>Java and Spring Boot application development with clean architecture and RESTful APIs.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon"><i class="bi bi-database-gear"></i></div>
+        <h3>Database Integration</h3>
+        <p>MySQL, JPA and Hibernate integration for reliable and efficient data management.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-icon"><i class="bi bi-layers"></i></div>
+        <h3>Full Stack Development</h3>
+        <p>Complete web application architecture from database design to deployed user interface.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section-block section-alt">
+    <div class="section-label">Work</div>
+    <h2 class="section-heading">Selected Projects</h2>
+    <p class="section-sub">Java and Spring Boot applications built between May and July 2026.</p>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-preview pp1">
+          <!-- Add portfolio-preview.png beside index.html and replace this slot with: -->
+          <img class="project-preview-image" src="porfolio.png" alt="Portfolio website screenshot" loading="lazy">
+         
+          <div class="project-image-slot" role="img" aria-label="Portfolio project screenshot placeholder">
+            <i class="bi bi-image" aria-hidden="true"></i>
+            <span>Add Portfolio project image</span>
+          </div>
+          <div class="project-num">01</div>
+        </div>
+        <div class="project-info">
+          <h3>Personal Portfolio Website</h3>
+          <p>May 2026 — Jun 2026. Built a responsive portfolio to showcase software projects and technical writing with reusable Thymeleaf layout fragments. Deployed it to Render with environment-based configuration and GitHub continuous deployment.</p>
+          <div class="tech-badges">
+            <span class="badge-tech">Java</span>
+            <span class="badge-tech">Spring Boot</span>
+            <span class="badge-tech">Thymeleaf</span>
+            <span class="badge-tech">Bootstrap 5</span>
+            <span class="badge-tech">Render</span>
+          </div>
+          <div class="project-links">
+            <a href="https://portfolio-gx88.onrender.com" class="btn-project" target="_blank" rel="noopener noreferrer">Live Portfolio <i class="bi bi-arrow-up-right"></i></a>
+            <a href="https://github.com/princegupt1234" class="btn-project-ghost" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card project-card-alt">
+        <div class="project-preview pp2">
+          <!-- Add viastastore-preview.png beside index.html and replace this slot with: -->
+          <img class="project-preview-image" src="ecommerce.png" alt="Viastastore e-commerce application screenshot" loading="lazy">
+         
+          <div class="project-image-slot" role="img" aria-label="Viastastore project screenshot placeholder">
+            <i class="bi bi-image" aria-hidden="true"></i>
+            <span>Add Viastastore project image</span>
+          </div>
+          <div class="project-num">02</div>
+        </div>
+        <div class="project-info">
+          <h3>Viastastore — E-Commerce Web Application</h3>
+          <p>Jun 2026 — Jul 2026. Developed product browsing, category filtering, and cart checkout. Modelled users, products, categories, and orders in MySQL, with Spring MVC controllers, a separate service layer, and client-side JavaScript interactions.</p>
+          <div class="tech-badges">
+            <span class="badge-tech">Java</span>
+            <span class="badge-tech">Spring Boot</span>
+            <span class="badge-tech">Spring Data JPA</span>
+            <span class="badge-tech">MySQL</span>
+            <span class="badge-tech">Thymeleaf</span>
+            <span class="badge-tech">Bootstrap 5</span>
+            <span class="badge-tech">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#contact" class="btn-project">Ask About Project <i class="bi bi-arrow-right"></i></a>
+            <a href="https://github.com/princegupt1234/Viastastore" class="btn-project-ghost" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-preview pp3">
+          <!-- Add routex-preview.png beside index.html and replace this slot with: -->
+          <img class="project-preview-image" src="RouteX.png<form action="https://api.web3forms.com/submit" method="POST">" alt="RouteX transport management system screenshot" loading="lazy">
+         
+          <div class="project-image-slot" role="img" aria-label="RouteX project screenshot placeholder">
+            <i class="bi bi-image" aria-hidden="true"></i>
+            <span>Add RouteX project image</span>
+          </div>
+          <div class="project-num">03</div>
+        </div>
+        <div class="project-info">
+          <h3>RouteX — Transport Management System</h3>
+          <p>May 2026 — Jun 2026. Developed a Spring Boot transport management system with MySQL entities, layered controllers, services, and repositories, then containerized it with Docker.</p>
+          <div class="tech-badges">
+            <span class="badge-tech">Java</span>
+            <span class="badge-tech">Spring Boot</span>
+            <span class="badge-tech">Spring MVC</span>
+            <span class="badge-tech">MySQL</span>
+            <span class="badge-tech">REST APIs</span>
+            <span class="badge-tech">Maven</span>
+            <span class="badge-tech">Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="#contact" class="btn-project">Ask About Project <i class="bi bi-arrow-right"></i></a>
+            <a href="https://github.com/princegupt1234/RouteX" class="btn-project-ghost" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / JOURNEY -->
+  <section id="experience" class="section-block">
+    <div class="section-label">Timeline</div>
+    <h2 class="section-heading">Training &amp; Experience</h2>
+    <p class="section-sub">Hands-on Java and Spring Boot training.</p>
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-date">Jun 2026 — Jul 2026</div>
+          <h3>Java &amp; Spring Boot Summer Training</h3>
+          <p class="timeline-org">Techpile Technology Pvt. Ltd.</p>
+          <ul class="timeline-points">
+            <li>Built Java and Spring Boot backend services and REST APIs for data-driven web applications.</li>
+            <li>Designed MySQL schemas and SQL queries to support CRUD operations.</li>
+            <li>Integrated Thymeleaf templates with Spring MVC and styled responsive views with Bootstrap 5.</li>
+            <li>Tested APIs in Postman, including validation, error handling, and HTTP status codes.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>Postman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section-block section-alt">
+    <div class="section-label">Education</div>
+    <h2 class="section-heading">Academic Background</h2>
+    <p class="section-sub">My studies in computer science and earlier academic milestones.</p>
+    <div class="education-grid">
+      <article class="education-card education-current">
+        <div class="education-icon"><i class="bi bi-mortarboard"></i></div>
+        <span class="education-period">Aug 2023 — Jun 2027 · Pursuing</span>
+        <h3>B.Tech — Computer Science &amp; Engineering</h3>
+        <p class="education-institution">Bansal Institute of Engineering &amp; Technology · AKTU, Lucknow</p>
+      </article>
+      <article class="education-card">
+        <div class="education-icon"><i class="bi bi-journal-text"></i></div>
+        <span class="education-period">2020 — 2022</span>
+        <h3>Intermediate (Class XII)</h3>
+        <p class="education-institution">Udit Narayan Inter College, Kushinagar · UP Board</p>
+        <p class="education-result">63.2%</p>
+      </article>
+      <article class="education-card">
+        <div class="education-icon"><i class="bi bi-book"></i></div>
+        <span class="education-period">2019 — 2020</span>
+        <h3>High School (Class X)</h3>
+        <p class="education-institution">Shree Chhatathu Prasad Uchchatar Madhyamik Vidyalaya, Kushinagar · UP Board</p>
+        <p class="education-result">79.3%</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="section-block section-alt">
+    <div class="section-label">Growth</div>
+    <h2 class="section-heading">Growth &amp; Learning</h2>
+    <p class="section-sub">Training and course certificates, plus a snapshot of coding practice.</p>
+    <div class="achievements-grid">
+      <div class="achievement-card">
+        <div class="ach-icon"><i class="bi bi-patch-check"></i></div>
+        <h4>Java Spring Boot Summer Training</h4>
+        <p>45-day training certificate · Techpile Technology Pvt. Ltd. · July 2026 · Credential ID: TechpileST260929</p>
+      </div>
+      <div class="achievement-card">
+        <div class="ach-icon"><i class="bi bi-database-check"></i></div>
+        <h4>SQL and Relational Databases 101</h4>
+        <p>DB0101EN · IBM Skills Network / Cognitive Class · August 2026</p>
+      </div>
+      <div class="achievement-card">
+        <div class="ach-icon"><i class="bi bi-code-slash"></i></div>
+        <h4>Basics of Java Programming</h4>
+        <p>CodeHelp · August 2026 · Serial No. CH-2026-DB9BB06A848D</p>
+      </div>
+      <div class="achievement-card">
+        <div class="ach-icon"><i class="bi bi-braces"></i></div>
+        <h4>LeetCode Practice</h4>
+        <p>Solved 8+ coding problems in Java, covering arrays, strings, and recursion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section-block">
+    <div class="section-label">Testimonials</div>
+    <h2 class="section-heading">Words From People</h2>
+    <p class="section-sub">Genuine testimonials will be added here.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card placeholder-card">
+        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+        <p class="testimonial-text">This space is reserved for a genuine testimonial. No fictional reviews have been created.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">?</div>
+          <div><strong>Your Name Here</strong><span>Role · Organization</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card placeholder-card">
+        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+        <p class="testimonial-text">This space is reserved for a genuine testimonial. No fictional reviews have been created.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">?</div>
+          <div><strong>Your Name Here</strong><span>Role · Organization</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card placeholder-card">
+        <div class="quote-icon"><i class="bi bi-quote"></i></div>
+        <p class="testimonial-text">This space is reserved for a genuine testimonial. No fictional reviews have been created.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">?</div>
+          <div><strong>Your Name Here</strong><span>Role · Organization</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-block section-alt">
+    <div class="section-label">Contact</div>
+    <h2 class="section-heading">Have an Idea? Let's Talk.</h2>
+    <p class="section-sub">Seeking an SDE / Java Developer role.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>Contact me about SDE / Java Developer opportunities by email, phone, or WhatsApp.</p>
+        <div class="contact-detail"><i class="bi bi-envelope"></i><a href="mailto:princegupt3052@gmail.com">princegupt3052@gmail.com</a></div>
+        <div class="contact-detail"><i class="bi bi-telephone"></i><a href="tel:+917275807576">+91 7275807576</a></div>
+        <div class="contact-detail"><i class="bi bi-whatsapp"></i><a href="https://wa.me/917275807576" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a></div>
+        <div class="contact-detail"><i class="bi bi-geo-alt"></i><span>Lucknow, Uttar Pradesh, India</span></div>
+        <div class="contact-detail"><i class="bi bi-linkedin"></i><a href="https://www.linkedin.com/in/princegupt1234/" target="_blank" rel="noopener noreferrer">linkedin.com/in/princegupt1234</a></div>
+        <div class="contact-detail"><i class="bi bi-github"></i><a href="https://github.com/princegupt1234" target="_blank" rel="noopener noreferrer">@princegupt1234 on GitHub</a></div>
+        <div class="contact-annotation">English (Professional) · Hindi (Native)</div>
+      </div>
+      <div class="contact-form-wrap">
+        <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="2358d255-eb8c-4a5b-ac2a-fe1652785d2c"/>
+          <input type="hidden" name="from_name" value="Prince Gupt Portfolio"/>
+          <input type="hidden" name="redirect" id="cf-next"/>
+          <div class="form-group">
+            <label for="cf-name">Full Name</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" placeholder="Your full name" required/>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email Address</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="your@email.com" required/>
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" required/>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="4" placeholder="Tell me about your idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary-custom w-100">Send Message <i class="bi bi-send"></i></button>
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">PG</div>
+        <p>Java Backend Developer · Lucknow, India</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/princegupt1234/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/princegupt1234" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+        <a href="https://wa.me/917275807576" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+        <a href="mailto:princegupt3052@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear">2026</span> Prince Gupt. Crafted with care.</span>
+      <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+    </div>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
