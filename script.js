@@ -154,6 +154,10 @@ document.querySelectorAll("[data-profile-image]").forEach((image) => {
   }
 });
 
+document.querySelectorAll(".project-preview-image").forEach((image) => {
+  image.addEventListener("error", () => image.remove(), { once: true });
+});
+
 const contactForm = document.getElementById("contactForm");
 const formSuccess = document.getElementById("formSuccess");
 const submitButton = contactForm.querySelector('button[type="submit"]');

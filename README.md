@@ -29,6 +29,9 @@ Bootstrap, Bootstrap Icons, and Google Fonts load from CDNs, so an internet conn
 | `script.js` | Theme toggle, mobile navigation, terminal typewriter, scroll effects, and form behavior |
 | `Prince-Gupt-Resume.pdf` | Downloadable resume |
 | `profile.png` | Profile photo used in the sidebar and hero |
+| `porfolio.png` | Portfolio project screenshot |
+| `ecommerce.png` | Viastastore project screenshot |
+| `RouteX.png` | RouteX project screenshot |
 
 ## Run locally
 
