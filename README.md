@@ -1,4 +1,4 @@
-# Prince Gupt Portfolio
+# prince-dev — Prince Gupt Portfolio
 
 A responsive personal portfolio built with HTML, CSS, Bootstrap, and a small amount of vanilla JavaScript.
 
@@ -57,10 +57,8 @@ The form submits to Web3Forms; there is no application backend in this project. 
 
 This site is static and needs no build command.
 
-1. Create a dedicated GitHub repository for the portfolio.
-2. Upload the **contents** of this folder to the repository root. Keep `index.html`, `styles.css`, `script.js`, and `Prince-Gupt-Resume.pdf` together at the top level; do not upload the parent folder itself.
-3. In the repository, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**, select `main` (or the repository's default branch) and `/(root)`, then save.
-5. Wait for the Pages deployment to finish. GitHub will show the published URL in the Pages settings.
+1. In the `prince-dev` repository, open **Settings → Pages**.
+2. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/(root)`, then save.
+3. Wait for the Pages deployment to finish. GitHub will show the published URL in the Pages settings.
 
-The page uses relative paths for its CSS, JavaScript, photo, and resume, so it works both at a user-site URL (`https://<username>.github.io/`) and a project-site URL (`https://<username>.github.io/<repository>/`). Use the hosted HTTPS URL when testing contact-form submissions.
+The page uses relative paths for its CSS, JavaScript, resume, project screenshots, and certificate scans, so it works both at a user-site URL (`https://<username>.github.io/`) and a project-site URL (`https://<username>.github.io/<repository>/`). Use the hosted HTTPS URL when testing contact-form submissions.
