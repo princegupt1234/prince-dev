@@ -7,7 +7,9 @@ A responsive personal portfolio built with HTML, CSS, Bootstrap, and a small amo
 - Light and dark themes
 - Responsive navigation and layouts
 - Rotating terminal commands and outputs with reduced-motion support
+- Java and Spring Boot code-editor hero illustration
 - About, skills, projects, training, education, and certifications
+- Certificate scans and accurate credential details with responsive previews
 - Downloadable resume
 - Contact form handled by Web3Forms
 
@@ -28,10 +30,12 @@ Bootstrap, Bootstrap Icons, and Google Fonts load from CDNs, so an internet conn
 | `styles.css` | Themes, layout, and responsive styles |
 | `script.js` | Theme toggle, mobile navigation, terminal typewriter, scroll effects, and form behavior |
 | `Prince-Gupt-Resume.pdf` | Downloadable resume |
-| `profile.png` | Profile photo used in the sidebar and hero |
 | `porfolio.png` | Portfolio project screenshot |
 | `ecommerce.png` | Viastastore project screenshot |
 | `RouteX.png` | RouteX project screenshot |
+| `certificates/java-spring-boot.jpg` | Java and Spring Boot training certificate image |
+| `certificates/ibm-sql-databases.png` | Cognitive Class SQL and Relational Databases certificate |
+| `certificates/java-programming.png` | CodeHelp Basics of Java Programming certificate |
 
 ## Run locally
 
@@ -54,7 +58,7 @@ The form submits to Web3Forms; there is no application backend in this project. 
 This site is static and needs no build command.
 
 1. Create a dedicated GitHub repository for the portfolio.
-2. Upload the **contents** of this folder to the repository root. Keep `index.html`, `styles.css`, `script.js`, `profile.png`, and `Prince-Gupt-Resume.pdf` together at the top level; do not upload the parent folder itself.
+2. Upload the **contents** of this folder to the repository root. Keep `index.html`, `styles.css`, `script.js`, and `Prince-Gupt-Resume.pdf` together at the top level; do not upload the parent folder itself.
 3. In the repository, open **Settings → Pages**.
 4. Under **Build and deployment**, choose **Deploy from a branch**, select `main` (or the repository's default branch) and `/(root)`, then save.
 5. Wait for the Pages deployment to finish. GitHub will show the published URL in the Pages settings.

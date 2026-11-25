@@ -145,17 +145,20 @@ if (heroCommandText && heroRoleText) {
   reducedMotion.addEventListener("change", syncRoleAnimation);
 }
 
-document.querySelectorAll("[data-profile-image]").forEach((image) => {
-  const showImage = () => image.parentElement.classList.add("has-photo");
-
-  image.addEventListener("load", showImage, { once: true });
-  if (image.complete) {
-    if (image.naturalWidth > 0) showImage();
-  }
-});
-
 document.querySelectorAll(".project-preview-image").forEach((image) => {
   image.addEventListener("error", () => image.remove(), { once: true });
+});
+
+document.querySelectorAll("[data-certificate-image]").forEach((image) => {
+  const certificateMedia = image.parentElement;
+  const showCertificate = () => certificateMedia.classList.add("has-image");
+
+  image.addEventListener("load", showCertificate, { once: true });
+  image.addEventListener("error", () => image.remove(), { once: true });
+  if (image.complete) {
+    if (image.naturalWidth > 0) showCertificate();
+    else image.remove();
+  }
 });
 
 const contactForm = document.getElementById("contactForm");

@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Prince Gupt — Java Backend Developer</title>
 <meta name="description" content="Prince Gupt is a Java and Spring Boot developer building REST APIs, full-stack applications, and MySQL-backed systems from Lucknow, India."/>
 <meta name="author" content="Prince Gupt"/>
-<meta name="theme-color" content="#7c3aed"/>
+<meta name="theme-color" content="#090a0d"/>
 <link rel="canonical" href="https://princegupt1234.github.io/princePortfolio/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://princegupt1234.github.io/princePortfolio/"/>
 <meta property="og:title" content="Prince Gupt — Java Backend Developer"/>
 <meta property="og:description" content="Java, Spring Boot, REST APIs, MySQL, Docker, and full-stack projects."/>
-<meta property="og:image" content="https://princegupt1234.github.io/princePortfolio/profile.png"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Prince Gupt — Java Backend Developer"/>
 <meta name="twitter:description" content="Java, Spring Boot, REST APIs, MySQL, Docker, and full-stack projects."/>
-<meta name="twitter:image" content="https://princegupt1234.github.io/princePortfolio/profile.png"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Caveat:wght@400;500&display=swap" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
@@ -27,15 +25,10 @@
 <!-- SIDEBAR -->
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-top">
-    <div class="sidebar-logo" aria-label="Prince Gupt">PG</div>
-    <div class="sidebar-avatar">
-      <div class="avatar-ring">
-        <div class="avatar-inner">
-          <span class="avatar-fallback" aria-hidden="true">PG</span>
-          <img class="profile-photo" src="profile.png" alt="Prince Gupt" data-profile-image/>
-        </div>
-      </div>
-    </div>
+    <a class="sidebar-brand" href="#hero" aria-label="Prince Gupt home">
+      <span class="sidebar-logo">PG</span>
+      <span class="sidebar-brand-name">Prince Gupt</span>
+    </a>
   </div>
   <nav class="sidebar-nav" aria-label="Primary navigation">
     <a href="#hero" class="nav-item active" data-section="hero">
@@ -56,14 +49,17 @@
     <a href="#education" class="nav-item" data-section="education">
       <i class="bi bi-mortarboard"></i><span>Education</span>
     </a>
+    <a href="#achievements" class="nav-item" data-section="achievements">
+      <i class="bi bi-patch-check"></i><span>Certificates</span>
+    </a>
     <a href="#contact" class="nav-item" data-section="contact">
       <i class="bi bi-chat-heart"></i><span>Contact</span>
     </a>
   </nav>
   <div class="sidebar-bottom">
     <div class="sidebar-sep"></div>
-    <button class="theme-toggle" id="themeToggle" type="button" title="Toggle theme" aria-label="Switch to dark theme" aria-pressed="false">
-      <i class="bi bi-moon-stars"></i>
+    <button class="theme-toggle" id="themeToggle" type="button" title="Toggle theme" aria-label="Switch to light theme" aria-pressed="true">
+      <i class="bi bi-sun"></i>
     </button>
   </div>
 </aside>
@@ -90,10 +86,11 @@
     <a href="#projects" class="nav-item">Projects</a>
     <a href="#experience" class="nav-item">Experience</a>
     <a href="#education" class="nav-item">Education</a>
+    <a href="#achievements" class="nav-item">Certificates</a>
     <a href="#contact" class="nav-item">Contact</a>
   </nav>
-  <button class="drawer-theme-toggle" id="mobileThemeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
-    <i class="bi bi-moon-stars" aria-hidden="true"></i><span>Toggle theme</span>
+  <button class="drawer-theme-toggle" id="mobileThemeToggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
+    <i class="bi bi-sun" aria-hidden="true"></i><span>Toggle theme</span>
   </button>
 </aside>
 
@@ -149,17 +146,29 @@
           <div class="portrait-glow"></div>
           <div class="portrait-ring-outer"></div>
           <div class="portrait-frame">
-            <div class="portrait-avatar">
-              <img class="profile-photo" src="profile.png" alt="Prince Gupt" data-profile-image/>
-              <div class="portrait-initials">PG</div>
-              <div class="portrait-silhouette">
-                <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <ellipse cx="100" cy="72" rx="38" ry="40" fill="#C9B5F5" opacity="0.7"/>
-                  <path d="M30 200 Q40 140 100 135 Q160 140 170 200" fill="#A98AE8" opacity="0.5"/>
-                </svg>
+            <div class="dev-visual" role="img" aria-label="Developer workspace illustration featuring Java, Spring Boot, REST APIs, and MySQL">
+              <div class="dev-editor">
+                <div class="dev-editor-bar">
+                  <span class="dev-window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="dev-filename">prince-api.java</span>
+                  <span class="dev-editor-status"><i></i> BUILDING</span>
+                </div>
+                <div class="dev-editor-code" aria-hidden="true">
+                  <div class="dev-code-row"><span class="dev-line-number">01</span><code><span class="code-annotation">@RestController</span></code></div>
+                  <div class="dev-code-row"><span class="dev-line-number">02</span><code><span class="code-keyword">public class</span> <span class="code-type">ApiController</span> {</code></div>
+                  <div class="dev-code-row"><span class="dev-line-number">03</span><code>  <span class="code-annotation">@GetMapping</span>(<span class="code-string">"/api"</span>)</code></div>
+                  <div class="dev-code-row"><span class="dev-line-number">04</span><code>  <span class="code-keyword">public</span> <span class="code-type">Response</span> hello() {</code></div>
+                  <div class="dev-code-row"><span class="dev-line-number">05</span><code>    <span class="code-keyword">return</span> <span class="code-type">Response</span>.ok();</code></div>
+                  <div class="dev-code-row"><span class="dev-line-number">06</span><code>  }</code></div>
+                  <div class="dev-code-row"><span class="dev-line-number">07</span><code>}</code></div>
+                </div>
+                <div class="dev-editor-footer"><span><i class="bi bi-git"></i> main</span><span>Java · Spring Boot</span></div>
               </div>
             </div>
           </div>
+          <div class="dev-stack-chip chip-java"><i class="bi bi-cup-hot"></i><span>Java</span></div>
+          <div class="dev-stack-chip chip-spring"><i class="bi bi-diagram-3"></i><span>Spring Boot</span></div>
+          <div class="dev-stack-chip chip-mysql"><i class="bi bi-database"></i><span>MySQL</span></div>
           <div class="float-shape fs1"></div>
           <div class="float-shape fs2"></div>
           <div class="float-shape fs3"></div>
@@ -407,30 +416,54 @@
 
   <!-- ACHIEVEMENTS -->
   <section id="achievements" class="section-block section-alt">
-    <div class="section-label">Growth</div>
-    <h2 class="section-heading">Growth &amp; Learning</h2>
-    <p class="section-sub">Training and course certificates, plus a snapshot of coding practice.</p>
+    <div class="section-label">Credentials</div>
+    <h2 class="section-heading">Certificates &amp; Learning</h2>
+    <p class="section-sub">A few milestones from my ongoing journey in software development.</p>
     <div class="achievements-grid">
       <div class="achievement-card">
+        <a class="certificate-media" href="certificates/java-spring-boot.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Techpile Java and Spring Boot training certificate">
+          <img src="certificates/java-spring-boot.jpg" alt="Techpile certificate awarded to Prince Gupt for 45 days of Java Spring Boot summer training, A++ grade, issued 26 July 2026" loading="lazy" decoding="async" data-certificate-image/>
+          <div class="certificate-placeholder">
+            <i class="bi bi-image" aria-hidden="true"></i>
+            <span>Certificate preview unavailable</span>
+          </div>
+        </a>
         <div class="ach-icon"><i class="bi bi-patch-check"></i></div>
-        <h4>Java Spring Boot Summer Training</h4>
-        <p>45-day training certificate · Techpile Technology Pvt. Ltd. · July 2026 · Credential ID: TechpileST260929</p>
+        <h4>Java &amp; Spring Boot Summer Training</h4>
+        <p>45-day training · Techpile Technology Pvt. Ltd. · A++ grade</p>
+        <p class="credential-meta">Issued 26 July 2026 · ID: <strong>TechpileST260929</strong></p>
       </div>
       <div class="achievement-card">
+        <a class="certificate-media" href="certificates/ibm-sql-databases.png" target="_blank" rel="noopener noreferrer" aria-label="Open the SQL and Relational Databases 101 certificate">
+          <img src="certificates/ibm-sql-databases.png" alt="Cognitive Class certificate awarded to Prince Gupt for SQL and Relational Databases 101, issued 22 August 2026" loading="lazy" decoding="async" data-certificate-image/>
+          <div class="certificate-placeholder">
+            <i class="bi bi-image" aria-hidden="true"></i>
+            <span>Certificate preview unavailable</span>
+          </div>
+        </a>
         <div class="ach-icon"><i class="bi bi-database-check"></i></div>
         <h4>SQL and Relational Databases 101</h4>
-        <p>DB0101EN · IBM Skills Network / Cognitive Class · August 2026</p>
+        <p>DB0101EN · Cognitive Class · IBM Developer Skills Network</p>
+        <p class="credential-meta">Issued 22 August 2026</p>
+        <a class="certificate-verify-link" href="https://courses.cognitiveclass.ai/certificates/c469d774e134f5fb90f3a0d81994dc" target="_blank" rel="noopener noreferrer">Verify credential <i class="bi bi-arrow-up-right"></i></a>
       </div>
       <div class="achievement-card">
+        <a class="certificate-media" href="certificates/java-programming.png" target="_blank" rel="noopener noreferrer" aria-label="Open the CodeHelp Basics of Java Programming certificate">
+          <img src="certificates/java-programming.png" alt="CodeHelp Basics of Java Programming certificate awarded to Prince Gupt, issued 11 August 2026" loading="lazy" decoding="async" data-certificate-image/>
+          <div class="certificate-placeholder">
+            <i class="bi bi-image" aria-hidden="true"></i>
+            <span>Certificate preview unavailable</span>
+          </div>
+        </a>
         <div class="ach-icon"><i class="bi bi-code-slash"></i></div>
         <h4>Basics of Java Programming</h4>
-        <p>CodeHelp · August 2026 · Serial No. CH-2026-DB9BB06A848D</p>
+        <p>CodeHelp · Issued 11 August 2026</p>
+        <p class="credential-meta">Serial No. <strong>CH-2026-DB9BB06A848D</strong></p>
       </div>
-      <div class="achievement-card">
-        <div class="ach-icon"><i class="bi bi-braces"></i></div>
-        <h4>Java Problem Solving</h4>
-        <p>DSA practice in Java across arrays, strings, recursion, and collections.</p>
-      </div>
+    </div>
+    <div class="practice-note">
+      <span class="practice-note-icon"><i class="bi bi-braces"></i></span>
+      <p><strong>Always learning.</strong> I also practice data structures and problem solving in Java across arrays, strings, recursion, and collections.</p>
     </div>
   </section>
 
